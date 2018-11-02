@@ -1,15 +1,11 @@
-.PHONY: all install-dev test coverage cov test-all tox docs release clean-pyc upload-docs ebook
+.PHONY: all  docs clean-pyc
 
-
-install-dev:
-	pip install -q -e .[dev]
 
 docs: clean-pyc
-	cp -rf ./uml ./docs
-	sphinx-apidoc -f -o ./docs ./myapp
-	# sphinx-build -b singlehtml ./docs ./docs/_build
-	sphinx-build ./docs ./docs/_build
+	sphinx-apidoc -f -o ./docs/source ./myapp
+	sphinx-build -b singlehtml ./docs/source ./docs/build/html
 	
+
 clean-pyc:
 	find . -name '*.pyc' -exec rm -f {} +
 	find . -name '*.pyo' -exec rm -f {} +
