@@ -2,7 +2,7 @@ actdiag==0.5.4
 alabaster==0.7.12
 Babel==2.6.0
 blockdiag==1.5.4
-certifi==2018.10.15
+certifi==2022.12.7
 chardet==3.0.4
 docutils==0.14
 funcparserlib==0.3.6
